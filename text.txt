@@ -1,0 +1,54 @@
+To use JavaScript for scraping LinkedIn job post URLs, you can use Puppeteer, a Node.js library that provides a high-level API to control a headless browser. Here’s how you can get started:
+
+
+---
+
+1. Install Dependencies
+
+You’ll need Node.js installed on your system. Then install Puppeteer using npm:
+
+npm install puppeteer
+
+
+---
+
+2. Write the Script
+
+Below is a sample script to scrape LinkedIn job post URLs from a company's job page:
+3. Explanation of the Script
+
+1. Login to LinkedIn: Automates logging in with your credentials.
+
+
+2. Navigate to Job Page: Opens the company’s job page URL.
+
+
+3. Extract Job URLs: Finds all job post links on the page using document.querySelectorAll().
+
+
+4. Save Links: Saves the extracted links to a job_links.json file.
+4. Run the Script
+
+Run the script with Node.js:
+
+node script.js
+
+
+---
+
+5. Handle Pagination
+
+If the company’s job page has multiple pages, you need to navigate through each page and collect links. Update the script as follows:
+6. Avoid LinkedIn Restrictions
+
+Rate Limiting: Use delays (await page.waitForTimeout(2000)) to avoid being flagged.
+
+Proxies: Rotate IPs using proxies to prevent being blocked.
+
+Headers: Use proper HTTP headers (like User-Agent) to mimic real browser behavior.
+
+
+
+---
+
+Let me know if you need help customizing this further!
